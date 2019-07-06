@@ -65,7 +65,7 @@ class Student
       LIMIT 1
     SQL
     
-    self.new_from_db(DB[:conn].execute(sql, name).first)
+    self.new_from_db(DB[:conn].execute(sql).first)
   end
 
   def self.find_by_name(name)
