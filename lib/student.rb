@@ -19,6 +19,7 @@ class Student
       SELECT *
       FROM students
       WHERE students.name = ?
+      LIMIT 1
     SQL
     
     self.new_from_db(DB[:conn].execute(sql, name).first)
